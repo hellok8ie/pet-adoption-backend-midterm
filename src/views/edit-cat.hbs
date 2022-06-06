@@ -1,0 +1,22 @@
+{{#with foundCat}}
+<h1>Update {{name}}'s Details</h1>
+<form action='/cats/edit/{{catId}}' method="POST">
+    <label for="name">Update Cat Name: </label>
+    <input type="text" name="name" value="{{name}}"/><br><br>
+
+    <label for="imgUrl">Update Cat Photo: </label>
+    <input type="text" name="imgUrl" value="{{imgUrl}}"/><br><br>
+
+    <label for="age">Update Cat Age: </label>
+    <input type="text" name="age" value="{{age}}"/><br><br>
+
+    <label for="breed">Update Cat Breed: </label>
+    <input type="text" name="breed" value="{{breed}}"/><br><br>
+
+    <label for="description">Update Cat Description: </label>
+    <input type="text" name="description" value="{{description}}" /><br><br>
+
+    <button type="submit">Submit {{name}}'s' Updates</button>
+</form>
+{{/with}}
+<br><a href="/cats">Return to Available Cats</a>

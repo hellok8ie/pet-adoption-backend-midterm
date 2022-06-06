@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const catControllers_1 = require("../controllers/catControllers");
+const router = (0, express_1.Router)();
+router.get('/', catControllers_1.getAllCats);
+router.get('/new', catControllers_1.newCatPage);
+router.post('/new', catControllers_1.addCat);
+router.get('/edit/:catId', catControllers_1.editCatPage);
+router.post('/edit/:catId', catControllers_1.editCat);
+router.post('/delete/:catId', catControllers_1.deleteCat);
+router.get('/:catId', catControllers_1.oneCat);
+exports.default = router;
