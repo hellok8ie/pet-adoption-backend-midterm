@@ -26,6 +26,10 @@ function CatFactory(sequelize) {
             type: sequelize_1.DataTypes.STRING,
             allowNull: false
         },
+        gender: {
+            type: sequelize_1.DataTypes.ENUM('male', 'female'),
+            allowNull: false
+        },
         breed: {
             type: sequelize_1.DataTypes.STRING,
             allowNull: false

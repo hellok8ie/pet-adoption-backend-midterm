@@ -1,6 +1,6 @@
 {{#with foundCat}}
-<h1>Update {{name}}'s Details</h1>
-<form action='/cats/edit/{{catId}}' method="POST">
+<h2>Update {{name}}'s Details</h2>
+<form action='/cats/edit/{{catId}}' method="POST" class="editForm">
     <label for="name">Update Cat Name: </label>
     <input type="text" name="name" value="{{name}}"/><br><br>
 
@@ -10,13 +10,24 @@
     <label for="age">Update Cat Age: </label>
     <input type="text" name="age" value="{{age}}"/><br><br>
 
+    <label>Update Gender:</label><br>
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" name="gender" id="female" value="female">
+    <label for="female">Female</label><br><br>
+
     <label for="breed">Update Cat Breed: </label>
     <input type="text" name="breed" value="{{breed}}"/><br><br>
 
     <label for="description">Update Cat Description: </label>
     <input type="text" name="description" value="{{description}}" /><br><br>
 
-    <button type="submit">Submit {{name}}'s' Updates</button>
+    <button type="submit" class="editButton">Submit {{name}}'s' Updates</button>
 </form>
+<form action="/cats/delete/{{catId}}" method="POST" class="deleteForm">
+    <button type="submit" class="deleteButton">{{name}} is Adopted!</button>
+</form><br><br>
 {{/with}}
-<br><a href="/cats">Return to Available Cats</a>
+<form action="/cats" method="GET">
+    <button type="submit" class="backButton">Back</button>
+</form>

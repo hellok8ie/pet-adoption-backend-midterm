@@ -1,16 +1,17 @@
 <h1>My Littlest Pet Shop</h1>
-<hr size="5" width="20%" color="yellow" align="left">  
-<ul>
+<form action="/cats/new" method="GET">
+    <button type="submit" class="addButton">Add New Kitty!</button>
+</form><br>
+<div class="tile-container">
     {{#each catList}}
-    <div>
-        <img src="{{imgUrl}}" alt="{{name}}" width="25%" height="35%"><br>
-        <h2>{{name}} | {{age}} | <a href="/cats/{{catId}}">More Info</a></h2> 
-        <a href="/cats/edit/{{catId}}">Edit Kitty</a><br><br>
+    <div class="catTile">
+        <img src="{{imgUrl}}" alt="{{name}}"><br>
+        <h3>{{name}} | {{age}} | <a href="/cats/{{catId}}" class="detailsBtn">More Info</a></h3> 
+        <a href="/cats/edit/{{catId}}" class="editLink">Edit Kitty</a><br><br>
         <form action="/cats/delete/{{catId}}" method="POST">
-            <button type="submit">Adopted!</button>
+            <button type="submit" class="deleteButton">Adopted!</button>
         </form>
     </div>
     {{/each}}
     <br>
-    <a href="/cats/new">Add Adoptable Kitty</a>
-</ul>
+</div>

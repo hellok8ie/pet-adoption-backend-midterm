@@ -1,0 +1,106 @@
+body {
+    padding: 25px;
+    background-color: #A9DEF9;
+    color: darkslategrey;
+    font-family: Georgia;
+    text-align: center;
+}
+
+button {
+    font-family: Georgia;
+    border-radius: 25px;
+    padding: 10px;
+    display: inline-flex;
+}
+
+h1 {
+    font-family: 'Twinkle Star', cursive;
+    font-size: 7vw;
+    color: #F694C1;
+    text-align: center;
+    margin-top: 1vw;
+    margin-bottom: 1vw;;
+}
+
+h2 {
+    font-family: 'Twinkle Star', cursive;
+    color: #F694C1;
+    font-size: 4vw;
+}
+
+.tile-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+}
+
+.catTile {
+    text-align: center;
+    grid-column: span 2;
+}
+
+.catTile img {
+    border: 1px solid #D3F8E2;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    max-width: 100%;
+}
+
+.adoptLink {
+    background-color: #EDE7B1;
+}
+
+.addButton {
+    font-size: larger;
+    background-color: #F694C1;
+    border: 1px solid #D3F8E2;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+
+.deleteButton {
+    background-color: #E4C1F9;
+    border: 1px solid #D3F8E2;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+
+.editButton {
+    background-color: #EDE7B1;
+    border: 1px solid #F694C1;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+
+.backButton {
+    background-color: #D3F8E2;
+    border: 1px solid #E4C1F9;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+
+.deleteForm {
+    display: inline-block;
+}
+
+.editForm {
+    display: inline;
+}
+
+.backForm {
+    display: inline-block;
+}
+
+.addForm {
+    display: inline;
+}
+
+.detailsBtn {
+    color: darkslategrey;
+}
+
+.editLink {
+    color: #EDE7B1;
+    font-weight: bold;
+    text-shadow: 3px grey;
+}
+
+.errorMessage {
+    font-size: larger;
+}

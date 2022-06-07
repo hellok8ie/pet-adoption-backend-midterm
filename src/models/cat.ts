@@ -5,6 +5,7 @@ export class Cat extends Model <InferAttributes<Cat>, InferCreationAttributes<Ca
     declare name: string;
     declare imgUrl: string;
     declare age: string;
+    declare gender: string;
     declare breed: string;
     declare description: string;
 };
@@ -27,6 +28,10 @@ export function CatFactory (sequelize: Sequelize) {
         },
         age: {
             type: DataTypes.STRING,
+            allowNull: false
+        },
+        gender: {
+            type: DataTypes.ENUM('male', 'female'),
             allowNull: false
         },
         breed: {
