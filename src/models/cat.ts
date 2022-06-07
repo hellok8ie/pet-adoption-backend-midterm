@@ -8,6 +8,8 @@ export class Cat extends Model <InferAttributes<Cat>, InferCreationAttributes<Ca
     declare gender: string;
     declare breed: string;
     declare description: string;
+    //createdOn and updatedOn are automatically created by Sequelize (named createdAt & updatedAt); both
+    //have the datatime datatype so I didn't add them here since they are not accessed in the project
 };
 
 export function CatFactory (sequelize: Sequelize) {
